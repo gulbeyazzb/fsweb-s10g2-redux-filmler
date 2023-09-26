@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 const AppHeader = (props) => {
   const appTitle = useSelector((store) => store.movie.appTitle);
-  const displayFavorites = true;
+  const displayFavorites = useSelector(
+    (store) => store.favorites.displayFavorites
+  );
 
   return (
     <div className="flex justify-between items-center shadow rounded-md bg-white p-2 pl-3 my-3">
