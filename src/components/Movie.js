@@ -13,6 +13,7 @@ const Movie = (props) => {
 
   const deleteMovieHandler = () => {
     dispatch(deleteMovie(movie.id));
+    push("/movies");
   };
 
   return (
