@@ -12,7 +12,7 @@ const Movie = (props) => {
   const movie = movies.find((movie) => movie.id === Number(id));
 
   const deleteMovieHandler = () => {
-    dispatch(deleteMovie(movie.id));
+    dispatch(deleteMovie(Number(id)));
     push("/movies");
   };
 
